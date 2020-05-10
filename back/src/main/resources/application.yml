@@ -1,12 +1,13 @@
-server:
-  port: 8319
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false&serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
     username: root
     password: root
-jpa:
-  show-sql: true
-  hibernate:
-    ddl-auto: update
+
+server:
+  port: 8319
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
